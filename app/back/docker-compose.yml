@@ -1,4 +1,15 @@
 version: '3'
 services:
-  my-service:
-    image: my-image
+  back:
+    image: nom_image_back
+    ports:
+      - "5000:5000"
+    environment:
+      - MA_VARIABLE=ma_valeur
+
+  front:
+    image: nom_image_front
+    ports:
+      - "80:80" # Remplacez 80 par le port réel utilisé par votre service front-end
+    environment:
+      - BACK_URL=http://back:5000

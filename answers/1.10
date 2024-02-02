@@ -1,0 +1,2 @@
+docker exec -it cont /bin/sh
+docker run -it brahim9327/oui:v1 /bin/sh
